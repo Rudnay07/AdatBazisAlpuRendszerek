@@ -1,6 +1,76 @@
--- Kereső tábla ide kell még 35 ember
+-- Kereső 
 INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
 VALUES (1, 'Kovács Petár', 'kovacs.petár@gmail.com','12345' ,'angol', TO_DATE('1990-01-01', 'YYYY-MM-DD'), 'Programtervező Informatikus');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (2, 'Lesták Mátyás', 'lest.matyi@gmail.com','kiskutya' ,'német', TO_DATE('1976-02-02', 'YYYY-MM-DD'), 'Autószerelő');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (3, 'Lazányi Ádám', 'laz.adam@gmail.com','78945' ,'angol', TO_DATE('2001-12-08', 'YYYY-MM-DD'), 'Matematika tanár');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (4, 'Kis Alex', 'kicsiAli@gmail.com','cius78' ,'német', TO_DATE('1968-02-02', 'YYYY-MM-DD'), 'Ács');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (5, 'Nagy Anna', 'annaNagy@gmail.com','19980205' ,'angol', TO_DATE('1970-02-02', 'YYYY-MM-DD'), 'Kozmetikus');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (6, 'Kovács Gergely', 'kovacsgeri@gmail.com','karate32' ,'angol', TO_DATE('1978-02-02', 'YYYY-MM-DD'), 'Kovács');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (7, 'Fekete Kevin', 'kevinFekete@gmail.com','formula23' ,'német', TO_DATE('1980-02-02', 'YYYY-MM-DD'), 'Mezőgazdász');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (8, 'Ács Attila', 'attesz@gmail.com','987654' ,'angol', TO_DATE('1990-02-02', 'YYYY-MM-DD'), 'Fizika tanár');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (9, 'Gombos Anna', 'gombos.anna@gmail.com','nyuszika92' ,'angol', TO_DATE('1993-02-02', 'YYYY-MM-DD'), 'Fodrász');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (10, 'Szilágyi Tamás', 'szilágyitomi@gmail.com','adamluca12' ,'angol', TO_DATE('1988-02-02', 'YYYY-MM-DD'), 'Gyári munkás');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (11, 'Schreiber Zsombor', 'sch3zsombi@gmail.com','0123456' ,'angol', TO_DATE('1963-02-02', 'YYYY-MM-DD'), 'Eladó');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (12, 'Papp Gábor', 'pa2gabi@gmail.com','rammor5' ,'olasz', TO_DATE('1965-02-02', 'YYYY-MM-DD'), 'Villanyszerelő');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (13, 'Szigeti Luca', 'luca.szigeti@gmail.com','Sd56fdf' ,'angol', TO_DATE('2002-02-02', 'YYYY-MM-DD'), 'Műkörmös');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (14, 'Jeremiás Péter', 'jeremiasPeti@gmail.com','dsfsd268' ,'angol', TO_DATE('2000-02-02', 'YYYY-MM-DD'), 'Burkoló');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (15, 'Takács Max', 'max2003@gmail.com','bFDbg541' ,'angol', TO_DATE('1975-02-02', 'YYYY-MM-DD'), 'Kamionsofőr');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (16, 'Szűcs Milán', 'milo04Szucs@gmail.com','nbds6516' ,'angol', TO_DATE('1973-02-02', 'YYYY-MM-DD'), 'Taxisofőr');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (17, 'Lakatos Bíbor', 'lakatos.bibor@gmail.com','564s6fsdc5' ,'német', TO_DATE('1971-02-02', 'YYYY-MM-DD'), 'Kertész');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (18, 'Kollár Csepke', 'kollarcsepke@gmail.com','sdf3ds6+' ,'angol', TO_DATE('1982-02-02', 'YYYY-MM-DD'), 'Logisztikus');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (19, 'Bedő Márta', 'marta.bedo@gmail.com','455dsvsd8' ,'angol', TO_DATE('1998-02-02', 'YYYY-MM-DD'), 'Gazdasági Informatikus');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (20, 'Bubis Sára', 'sarika1976@gmail.com','dka563cs5' ,'angol', TO_DATE('1989-02-02', 'YYYY-MM-DD'), 'Eladó');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (21, 'Gál Mónika', 'moniGal@gmail.com','f3d92ds3d' ,'angol', TO_DATE('1985-02-02', 'YYYY-MM-DD'), 'Testedző');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (22, 'Guba Dominik', 'domi2004ka@gmail.com','lajcsimix5' ,'francia', TO_DATE('1972-02-02', 'YYYY-MM-DD'), 'Gép karbantartó');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (23, 'Czinkóczi Álmos', 'cziAlmi02@gmail.com','df3645gk' ,'japán', TO_DATE('1986-02-02', 'YYYY-MM-DD'), 'Lakatos');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (24, 'Susánszki Ida', 'susiIda@gmail.com','ww5wrrrter' ,'német', TO_DATE('1973-02-02', 'YYYY-MM-DD'), 'Biológia tanár');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (25, 'Jenei Előd', 'jenei.elod@gmail.com','writter55' ,'német', TO_DATE('1991-02-02', 'YYYY-MM-DD'), 'Vasutas');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (26, 'Zelei Martin', 'zelei.martin@gmail.com','25sdfsdcx' ,'angol', TO_DATE('1996-02-02', 'YYYY-MM-DD'), 'Buszvezető');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (27, 'Bakos Zétény', 'zeteny.bakos@gmail.com','3679865' ,'angol', TO_DATE('1979-02-02', 'YYYY-MM-DD'), 'Vízszerelő');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (28, 'Szabó Zita', 'szebo.zita@gmail.com','klmoocxy' ,'francia', TO_DATE('1974-02-02', 'YYYY-MM-DD'), 'Könyvelő');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (29, 'Mukucz Zoltán', 'mukucz012@gmail.com','26s66f9hu9n' ,'angol', TO_DATE('1984-02-02', 'YYYY-MM-DD'), 'Logisztikus');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (30, 'Ambrus Rita', 'ambrusrita@gmail.com','t58z9h2' ,'holland', TO_DATE('1996-02-02', 'YYYY-MM-DD'), 'Ápoló');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (31, 'Kálmán Sándor', 'kalmansandor@gmail.com','c2b8e2d' ,'angol', TO_DATE('1999-02-02', 'YYYY-MM-DD'), 'Építészmérnök');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (32, 'Kerti Laura', 'kerti45@gmail.com','ekjajlc52' ,'spanyol', TO_DATE('1978-02-02', 'YYYY-MM-DD'), 'Eladó');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (33, 'Kulcsár Roland', 'kulcsar56@gmail.com','szin52dx' ,'angol', TO_DATE('1987-02-02', 'YYYY-MM-DD'), 'Közgaszdász');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (34, 'Kardos Benedek', 'kardos.benedek@gmail.com','grege255' ,'angol', TO_DATE('1996-02-02', 'YYYY-MM-DD'), 'Targoncás');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (35, 'Boa Karina', 'boa8karina@gmail.com','greg624s' ,'angol', TO_DATE('1974-02-02', 'YYYY-MM-DD'), 'Cukrász');
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (36, 'Somogyvári Márk', 'somogyvari.mark@gmail.com','dsfs65a5f' ,'angol', TO_DATE('1977-02-02', 'YYYY-MM-DD'), 'Pék');
 
 --Cégek
 INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
@@ -44,33 +114,47 @@ VALUES (19, 'UIO Bt.', 15);
 INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
 VALUES (20, 'KLP Zrt.', 130);
 
---Hirdető kell ide még 7 ember !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--Hirdető 
 INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
-VALUES (1, 'Kovács Ágnes', 'kovacs.agnes@example.com', 'password1', 1);
+VALUES (1, 'Kovács Ágnes', 'kovacs.agnes@gmail.com', 'password1', 1);
 INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
-VALUES (2, 'Balogh Péter', 'balogh.peter@example.com', 'password2', 2);
+VALUES (2, 'Balogh Péter', 'balogh.peter@gmail.com', 'password2', 2);
 INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
-VALUES (3, 'Nagy Anna', 'nagy.anna@example.com', 'password3', 3);
+VALUES (3, 'Nagy Anna', 'nagy.anna@gmail.com', 'password3', 3);
 INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
-VALUES (4, 'Kiss István', 'kiss.istvan@example.com', 'password4', 4);
+VALUES (4, 'Kiss István', 'kiss.istvan@gmail.com', 'password4', 4);
 INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
-VALUES (5, 'Tóth Márton', 'toth.marton@example.com', 'password5', 5);
+VALUES (5, 'Tóth Márton', 'toth.marton@gmail.com', 'password5', 5);
 INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
-VALUES (6, 'Szabó Viktória', 'szabo.viktoria@example.com', 'password6', 6);
+VALUES (6, 'Szabó Viktória', 'szabo.viktoria@gmail.com', 'password6', 6);
 INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
-VALUES (7, 'Farkas Gábor', 'farkas.gabor@example.com', 'password7', 7);
+VALUES (7, 'Farkas Gábor', 'farkas.gabor@gmail.com', 'password7', 7);
 INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
-VALUES (8, 'Szűcs Katalin', 'szucs.katalin@example.com', 'password8', 8);
+VALUES (8, 'Szűcs Katalin', 'szucs.katalin@gmail.com', 'password8', 8);
 INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
-VALUES (9, 'Molnár Tamás', 'molnar.tamas@example.com', 'password9', 9);
+VALUES (9, 'Molnár Tamás', 'molnar.tamas@gmail.com', 'password9', 9);
 INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
-VALUES (10, 'Papp László', 'papp.laszlo@example.com', 'password10', 10);
+VALUES (10, 'Papp László', 'papp.laszlo@gmail.com', 'password10', 10);
 INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
-VALUES (11, 'Boros Eszter', 'boros.eszter@example.com', 'password11', 11);
+VALUES (11, 'Boros Eszter', 'boros.eszter@gmail.com', 'password11', 11);
 INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
-VALUES (12, 'Horváth Gergő', 'horvath.gergo@example.com', 'password12', 12);
+VALUES (12, 'Horváth Gergő', 'horvath.gergo@gmail.com', 'password12', 12);
 INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
-VALUES (13, 'Kerekes Zsolt', 'kerekes.zsolt@example.com', 'password13', 13);
+VALUES (13, 'Kerekes Zsolt', 'kerekes.zsolt@gmail.com', 'password13', 13);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (14, 'Nagy Villő', 'nagy.villo@gmail.com', 'password14', 14);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (15, 'Kovács Bálint', 'kovacs.balint@gmail.com', 'password15', 15);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (16, 'Petőházi Rajmi', 'petohazi.rajmi@gmail.com', 'password16', 16);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (17, 'Dinda Noémi', 'dinda.noemi@gmail.com', 'password17', 17);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (18, 'Sebők Csanád', 'sebok.csanad@gmail.com', 'password18', 18);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (19, 'Glavosits Kamilla', 'glasi.kamilla@gmail.com', 'password19', 19);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (20, 'Ruppert Panka', 'rupipanka@gmail.com', 'password20', 20);
 
 --Kategória 
 INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (1, 'Marketing', 10, 5);
@@ -89,29 +173,117 @@ INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES 
 INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (14, 'Gyártás', 9, 13);
 INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (15, 'Szolgáltatás', 11, 2);
 
---Munka
-INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID)
-VALUES (1, 'Programozó', 'Java, C#', 3000, 1);
-INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID)
-VALUES (2, 'Tesztelő', 'SQL, Python', 2500, 1);
-INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID)
-VALUES (3, 'Grafikus', 'Adobe Photoshop', 2800, 2);
-INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID)
-VALUES (4, 'Webdesigner', 'HTML, CSS', 2600, 2);
-INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID)
-VALUES (5, 'Projektmenedzser', 'Angol, vezetői tapasztalat', 3500, 3);
-INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID)
-VALUES (6, 'Könyvelő', 'SAP, adóügyek', 2800, 4);
-INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID)
-VALUES (7, 'HR tanácsadó', 'Munkajog, rekrutálás', 3000, 5);
-INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID)
-VALUES (8, 'Értékesítő', 'Angol, B kategóriás jogosítvány', 2700, 6);
-INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID)
-VALUES (9, 'IT biztonsági szakértő', 'IT biztonsági rendszerek', 3500, 7);
-INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID)
-VALUES (10, 'Adattárház szakértő', 'Oracle, PL/SQL', 3400, 7);
-INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID)
-VALUES (11, 'Marketing asszisztens', 'Online marketing', 2400, 8);
-INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID)
-VALUES (12, 'Ügyfélszolgálati munkatárs', 'Német nyelv, kommunikációs készség', 2500, 9);
 
+--Munka 
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (1, 'Újságíró', 'angol', 1700 , 1);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (2, 'Grafikus', 'angol', 1800 , 1);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (3, 'Titkár', 'angol', 2500 , 1);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (4, 'Frontend programozó', 'francia', 2000 , 2);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (5, 'Backend programozó', 'angol', 1500 , 2);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (6, 'Bér-tb specialista', 'angol', 1600 , 3);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (7, 'Projektkoordinátor', 'német', 1700 , 3);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (8, 'Pénzügyi elemző', 'angol', 1800 , 4);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (9, 'Pénzügyi ügyintéző', 'német', 1900 , 4);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (10, 'Eládási koordinátor', 'angol', 2000 , 5);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (11, 'Ügyfélkapcsolati munkatárs', 'spanyol', 2100 , 5);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (12, 'Logisztika üzemviteli szakértő', 'angol', 2200 , 6);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (13, 'Minőségiügyi koordinátor', 'angol', 2300 , 6);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (14, 'Fémmegmunkálóipari értékesítési tanácsadó', 'angol', 2400 , 7);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (15, 'Területi Értékesítési Képviselő', 'német', 2500 , 7);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (16, 'Pénzügyi ügyintéző', 'angol', 1500 , 8);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (17, 'Főkönyvi könyvelő', 'angol', 1600 , 8);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (18, 'Precíziós gazdálkodási szaktanácsadó', 'olasz', 1700 , 9);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (19, 'Tápanyag gazdálkodási asszisztens', 'angol', 1700 , 9);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (20, 'Tápanyag gazdálkodási asszisztens', 'angol', 1900 , 9);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (21, 'Szolgáltatás értékesítő', 'holland', 1400 , 10);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (22, 'Marketing gyakornok', 'angol', 2000 , 10);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (23, 'Gyártástámogató mérnök', 'német', 2100 , 11);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (24, 'Minőségirányítási mérnök', 'angol', 2200 , 11);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (25, 'Minőségbiztosítási Mérnök', 'német', 2300 , 11);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (26, 'Projekt mérnök', 'angol', 2400 , 11);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (27, 'Szakmenedzser', 'angol', 2500 , 12);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (28, 'Angol tanár/ oktató nyelviskolában', 'német', 2600 , 12);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (29, 'Programozás oktatása', 'angol', 1400 , 12);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (30, 'Tréning koordinátor', 'angol', 1500 , 12);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (31, 'Fizika tanár', 'francia', 1600 , 12);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (32, 'Kereskedelem fejlesztési szakértő', 'angol', 1700 , 13);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (33, 'Alkatrész értékesítési menedzser', 'francia', 1800 , 13);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (34, 'Hús / pék eladó (Érd)', 'angol', 1900 , 13);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (35, 'CCC eladó', 'holland', 2000 , 13);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (36, 'Műszakvezető', 'angol', 2100 , 14);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (37, 'Gyártási tesztmérnök', 'angol', 2200 , 14);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (38, '(Gyártási) Folyamatmérnök', 'spanyol', 2300 , 14);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (39, 'Műköröm építő', 'angol', 2400 , 15);
+INSERT INTO MUNKA (MunkaID, Megnevezes, SzuksegesNyelvtudas, Oraber, KategoriaID) 
+VALUES (40, 'Hajhosszabbító', 'angol', 2500 , 15);
+
+--Jelentkezett 
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID)  VALUES (1, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 28, 1);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (2, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 35, 2);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (3, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 33, 3);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (4, TO_DATE('2023-02-25', 'YYYY-MM-DD'), 1, 4);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (5, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 1, 5);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (6, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 33, 6);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (7, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 18, 7);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (8, TO_DATE('2023-03-21', 'YYYY-MM-DD'), 28, 8);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (9, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 33, 9);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (10, TO_DATE('2023-02-26', 'YYYY-MM-DD'), 20, 10);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (11, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 32, 11);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (12, TO_DATE('2023-03-25', 'YYYY-MM-DD'), 29, 12);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (13, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 19, 13);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (14, TO_DATE('2023-01-26', 'YYYY-MM-DD'), 11, 14);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (15, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 11, 15);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (16, TO_DATE('2023-03-16', 'YYYY-MM-DD'), 19, 16);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (17, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 28, 17);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (18, TO_DATE('2023-02-26', 'YYYY-MM-DD'), 33, 18);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (19, TO_DATE('2023-03-16', 'YYYY-MM-DD'), 33, 19);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (20, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 33, 20);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (21, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 11, 21);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (22, TO_DATE('2023-01-26', 'YYYY-MM-DD'), 19, 22);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (23, TO_DATE('2023-03-16', 'YYYY-MM-DD'), 10, 23);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (24, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 22, 24);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (25, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 10, 25);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (26, TO_DATE('2023-03-5', 'YYYY-MM-DD'), 22, 26);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (27, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 19, 27);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (28, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 3, 28);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (29, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 1, 29);
+INSERT INTO JELENTKEZETT (jelentkezettID, datum, FehasznaloID, MunkaID) VALUES (30, TO_DATE('2023-03-26', 'YYYY-MM-DD'), 8, 30);
