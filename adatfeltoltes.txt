@@ -1,0 +1,91 @@
+-- Kereső tábla ide kell még 35 ember
+INSERT INTO KERESO (FelhasznaloID, Nev, Email,jelszo, Nyelvtudas, SzuletesiIdo, Vegzettseg)
+VALUES (1, 'Kovács Petár', 'kovacs.petár@gmail.com','12345' ,'angol', TO_DATE('1990-01-01', 'YYYY-MM-DD'), 'Programtervező Informatikus');
+
+--Cégek
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (1, 'ABC Kft.', 50);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (2, 'XYZ Zrt.', 100);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (3, 'MNB Bt.', 20);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (4, 'KLM Kft.', 75);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (5, 'QWE Zrt.', 150);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (6, 'GHI Bt.', 30);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (7, 'JKL Kft.', 90);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (8, 'DEF Zrt.', 80);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (9, 'PRS Kft.', 40);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (10, 'TUV Bt.', 25);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (11, 'NOP Zrt.', 200);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (12, 'LMN Kft.', 60);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (13, 'BRS Bt.', 35);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (14, 'WSD Zrt.', 120);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (15, 'FGH Kft.', 70);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (16, 'XCV Bt.', 45);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (17, 'YTR Zrt.', 110);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (18, 'IOP Kft.', 55);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (19, 'UIO Bt.', 15);
+INSERT INTO CEG (CegID, CegNev, AlkalmazottakSzama)
+VALUES (20, 'KLP Zrt.', 130);
+
+--Hirdető kell ide még 7 ember !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (1, 'Kovács Ágnes', 'kovacs.agnes@example.com', 'password1', 1);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (2, 'Balogh Péter', 'balogh.peter@example.com', 'password2', 2);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (3, 'Nagy Anna', 'nagy.anna@example.com', 'password3', 3);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (4, 'Kiss István', 'kiss.istvan@example.com', 'password4', 4);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (5, 'Tóth Márton', 'toth.marton@example.com', 'password5', 5);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (6, 'Szabó Viktória', 'szabo.viktoria@example.com', 'password6', 6);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (7, 'Farkas Gábor', 'farkas.gabor@example.com', 'password7', 7);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (8, 'Szűcs Katalin', 'szucs.katalin@example.com', 'password8', 8);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (9, 'Molnár Tamás', 'molnar.tamas@example.com', 'password9', 9);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (10, 'Papp László', 'papp.laszlo@example.com', 'password10', 10);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (11, 'Boros Eszter', 'boros.eszter@example.com', 'password11', 11);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (12, 'Horváth Gergő', 'horvath.gergo@example.com', 'password12', 12);
+INSERT INTO HIRDETO (FelhasznaloID, Nev, Email, Jelszo, HirdetoID)
+VALUES (13, 'Kerekes Zsolt', 'kerekes.zsolt@example.com', 'password13', 13);
+
+--Kategória 
+INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (1, 'Marketing', 10, 5);
+INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (2, 'IT', 8, 7);
+INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (3, 'HR', 5, 3);
+INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (4, 'Könyvelés', 7, 9);
+INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (5, 'Ügyfélszolgálat', 12, 2);
+INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (6, 'Logisztika', 6, 13);
+INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (7, 'Értékesítés', 9, 4);
+INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (8, 'Pénzügy', 11, 6);
+INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (9, 'Gazdálkodás', 8, 12);
+INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (10, 'Reklám', 4, 1);
+INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (11, 'Mérnöki', 7, 11);
+INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (12, 'Oktatás', 3, 8);
+INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (13, 'Kereskedelem', 6, 10);
+INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (14, 'Gyártás', 9, 13);
+INSERT INTO KATEGORIA (KategoriaID, Megnevezes, AllasokSzama, HirdetoID) VALUES (15, 'Szolgáltatás', 11, 2);
+
