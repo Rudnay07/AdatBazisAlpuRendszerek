@@ -1,8 +1,8 @@
 <?php
 
 define('HOST','localhost/xe');
-define('USERNAME','BICOKNORBERT');
-define('PASSWORD','Bajaga45');
+define('USERNAME','ROLI');
+define('PASSWORD','asd');
 
 function csatlakozas(){
     $con = oci_connect(USERNAME, PASSWORD, HOST);
