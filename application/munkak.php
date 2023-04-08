@@ -1,8 +1,10 @@
 <?php
 
 require_once("connection.php");
-
+include_once ("Lecek/fej.php");
 ?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,20 +12,13 @@ require_once("connection.php");
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/lec.css">
     <title>Document</title>
-    <link rel=stylesheet type="text/css" href="css/style.css" />
+
 </head>
 <body>
 
-    <header>
-        <header>
-            <nav>
-                <a class="active" href="munkak.php.">Munkák</a>
-                <a href="keresok.php">Keresők</a>
-                <a href="cegek.php">Cégek</a>
 
-            </nav>
-        </header>
 
     </header>
     <div class="valami">
