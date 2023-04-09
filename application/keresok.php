@@ -34,7 +34,7 @@ echo '<table border="0">';
 $con = csatlakozas();
 
 //// -- lekerdezzuk a tabla tartalmat
-$stid = oci_parse($con, 'SELECT * FROM KERESO');
+$stid = oci_parse($con, 'SELECT * FROM íKERESO');
 
 oci_execute($stid);
 

@@ -10,21 +10,31 @@ if (isset($_POST['login'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+
     // SQL lekérdezés a felhasználó ellenőrzésére
     $query = "SELECT * FROM KERESO WHERE email = '$email' AND jelszo = '$password'";
 
+
+
+
     // Lekérdezés futtatása
     $result = oci_parse($conn, $query);
+
     oci_execute($result);
+    $row=oci_fetch_array($result,OCI_ASSOC);
 
     // Ha a lekérdezés sikeres és találtunk felhasználót
-    if (oci_fetch($result)) {
+    if ($row) {
         // Bejelentkezés sikeres, továbbítás a főoldalra
+        $_SESSION["loguser"]=$email;
+
         header("Location: Main.php");
     } else {
         // Hibaüzenet
         $message = "Hibás felhasználónév vagy jelszó";
     }
+
+
 }
 // Ha a regisztráció gombra kattintottak
 if (isset($_POST['register'])) {
