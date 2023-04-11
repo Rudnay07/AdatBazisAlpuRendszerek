@@ -51,7 +51,7 @@ oci_close($conn);
                 <li><a href="cegek.php">Cégek</a></li>
             </ul>
             <ul class="menu-links">
-                <li><a href="###">Profilom</a></li>
+                <li><a href="profil.php">Profilom</a></li>
             </ul>
             <ul class="menu-links">
                 <li><a href="Kijelentkezes.php"> Kijelentkezes </a></li>
@@ -61,15 +61,5 @@ oci_close($conn);
 
         </nav>
     </div>
-    <div class="body-text">
-        <?php
-        $ki = "Üdvözlöm " . $name . "!";
-        if (!empty($name)) {
-            echo '<h1>' .$ki . '</h1>';
-        }
-        ?>
 
-        <h2></h2>
-        <p></p>
-    </div>
 </div>
