@@ -1,7 +1,7 @@
 <?php
 
 require_once("connection.php");
-include_once ("Lecek/fej.php");
+include_once("Lecek/fej.php");
 
 $conn = csatlakozas();
 $query = "SELECT kategoriaid,megnevezes FROM KATEGORIA";
@@ -26,19 +26,19 @@ oci_execute($stid);
 
 </head>
 <body>
-        <div class="felso">
-            <h2>Válaszd ki melyik kategóriában szeretnél munkát keresni!</h2>
-            <?php
+<div class="felso">
+    <h2>Válaszd ki melyik kategóriában szeretnél munkát keresni!</h2>
+    <?php
 
-                while ( ($valtozo = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) !=false) {
-                    $kategoria_id = $valtozo['KATEGORIAID'];
-                    $item = $valtozo['MEGNEVEZES'];
-                    echo '<ul>';
-                    echo '<li><a href="munkak.php?kategoria_id=' .  $kategoria_id . '" class="gradient-text">' . $item . '</a></li>';
-                    echo '</ul>';
-                }
+    while (($valtozo = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) != false) {
+        $kategoria_id = $valtozo['KATEGORIAID'];
+        $item = $valtozo['MEGNEVEZES'];
+        echo '<ul>';
+        echo '<li><a href="munkak.php?kategoria_id=' . $kategoria_id . '" class="gradient-text">' . $item . '</a></li>';
+        echo '</ul>';
+    }
 
-            ?>
-        </div>
+    ?>
+</div>
 </body>
 </html>

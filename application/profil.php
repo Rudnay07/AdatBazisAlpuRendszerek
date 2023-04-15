@@ -25,7 +25,6 @@ if (oci_execute($stid)) {
     }
 }
 
-
 oci_free_statement($stid);
 oci_close($conn);
 
@@ -61,8 +60,11 @@ oci_close($conn);
     <h2>
         <td>Születési idő: <?php if (!empty($szuliido)) {echo $szuliido;} ?></td>
     </h2>
+    <h2>------------------------------------------------------</h2>
     <h2>
-        <td>Születési idő: <?php if (!empty($cv)) {echo $szuliido;} ?></td>
+        <td>Itt tudod megtekinteni, </td>
+        <h2>hogy eddig milyen munkákra <a href="Idejelentkezett.php">jelentkeztél</a></h2>
+
     </h2>
 </div>
 </table>

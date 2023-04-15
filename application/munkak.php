@@ -2,6 +2,7 @@
 
 require_once("connection.php");
 include_once ("Lecek/fej.php");
+
 ?>
 
 
@@ -53,7 +54,8 @@ include_once ("Lecek/fej.php");
         echo '<p>Szükséges nyelvtudás: '. $valtozo["SZUKSEGESNYELVTUDAS"] .'</p>';
         echo '<p>Órabér: '. $valtozo["ORABER"] .'Ft</p>';
         echo '</div>';
-        echo '<div class="card-a"><a class="card__link" href="#"> Részletek</a></div>';
+        $munka_id=$valtozo['MUNKAID'];
+        echo '<div class="card-a"><a class="card__link" href="jelentkezzet.php?munka_id=' .  $munka_id. '"> Jelentkezek</a></div>';
         echo '</div>';
     }
     echo '</div>';

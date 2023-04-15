@@ -45,7 +45,7 @@ oci_close($conn);
 
         <nav>
             <ul class="menu-links">
-                <li><a href="munkak.php">Munkák</a></li>
+                <li><a href="kategoriak.php">Kategóriák</a></li>
             </ul>
             <ul class="menu-links">
                 <li><a href="cegek.php">Cégek</a></li>

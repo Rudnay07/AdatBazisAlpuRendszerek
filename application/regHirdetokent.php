@@ -39,7 +39,7 @@ $message = "";
 
             <button type="submit" name="login">Bejelentkezés</button>
             <p></p>
-            <a href="regHirdetokent.php"<button type="submit">Bejelentkezés, mint Hirdető</button></a>
+            <a href="bejelentkezes.php"<button type="submit">Bejelentkezés, mint Kerső</button></a>
 
 
         </form>
@@ -58,7 +58,7 @@ $message = "";
                 <p>Kérem adja meg az adatait.</p>
                 <button class="ghost" id="signUp">Regisztráció</button>
                 <p> </p>
-                <a href="regHirdetokent.php"><button class="ghost">Regisztáció hirdetőként </button> </a>
+                <a href="bejelentkezes.php"><button class="ghost">Regisztáció Kersőként </button> </a>
             </div>
         </div>
     </div>

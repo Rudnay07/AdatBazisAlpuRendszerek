@@ -100,8 +100,6 @@ if (isset($_POST['register'])) {
             <button type="submit" name="login">Bejelentkezés</button>
             <p></p>
             <a href="regHirdetokent.php"<button type="submit">Bejelentkezés, mint Hirdető</button></a>
-
-
         </form>
     </div>
 
