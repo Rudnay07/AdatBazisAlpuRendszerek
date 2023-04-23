@@ -13,7 +13,7 @@ if (oci_execute($stid)) {
     $res = oci_fetch_array($stid, OCI_ASSOC);
     if ($res) {
         $name = $res['NEV'];
-        $id= $res['ID'];
+        $id= $res['FELHASZNALOID'];
 
     }
 }
@@ -43,7 +43,7 @@ oci_close($conn);
         <thead>
         <tr>
             <th>Munka megnevezés</th>
-            <th>Kategória</th>
+            <th>Mikor jelentkeztél</th>
             <th>Órabér</th>
             <th>Szükséges Nyelvtudás</th>
             <th>Jelentkezés törlése</th>
@@ -51,12 +51,38 @@ oci_close($conn);
         </thead>
         <tbody>
         <?php
-        $query = "SELECT * FROM JELENTKEZETT";
+        $query = "SELECT * FROM JELENTKEZETT WHERE FELHASZNALOID='$id'";
         $stid = oci_parse($conn, $query);
         oci_execute($stid);
-        while (($valtozo = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) != false) {
-           
+        $valtozo=oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
+        $ertek=$valtozo['MUNKAID'];
+        $ido=$valtozo['DATUM'];
+        while (($valtozo = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) != false ) {
+            echo "<tr>";
+
+            $ertek = $valtozo['MUNKAID'];
+
+            $query = "SELECT * FROM MUNKA WHERE MUNKAID='$ertek'";
+            $stid2 = oci_parse($conn, $query);
+            oci_execute($stid2);
+
+            while (($valtozo2 = oci_fetch_array($stid2, OCI_ASSOC+OCI_RETURN_NULLS)) != false ) {
+                echo "<td >". $valtozo2['MEGNEVEZES']."</td>";
+                echo "<td >". date('Y.m.d', strtotime($ido)) ."</td>";
+                echo "<td >". $valtozo2['ORABER']."</td>";
+                echo "<td >". $valtozo2['SZUKSEGESNYELVTUDAS']."</td>";
+                $id=$valtozo['JELENTKEZETTID'];
+              
+                echo "<td> <a href='munkaroltorles.php?jelentkezettid'" .$valtozo['JELENTKEZETTID']."'>&#9747</a></td>";
+            }
+            oci_free_statement($stid2);
+            echo "</tr>";
         }
+
+
+        oci_free_statement($stid);
+        oci_close($conn);
+
         ?>
         </tbody>
     </table>

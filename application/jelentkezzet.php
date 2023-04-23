@@ -30,7 +30,7 @@ echo $munka_id;
 
 // Prepare statement az SQL Injection támadások elkerülésér
     $stmt = oci_parse($conn, "INSERT INTO JELENTKEZETT (jelentkezettID,datum, FelhasznaloID, MunkaID) VALUES (jelentkezett_seq.nextval,SYSDATE, $id, $munka_id)");
-    echo 'itt vagyunk';
+
     if (oci_execute($stmt)) {
         echo'2';
         ?> <script>alert("Sikeresen jelentkeztél")
