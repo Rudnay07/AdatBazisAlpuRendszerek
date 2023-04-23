@@ -17,7 +17,7 @@ include_once ("Lecek/fej.php");
     <link rel="stylesheet" href="css/lec.css">
     <link rel="stylesheet" href="css/munkak.css">
 
-    <title>Munkák</title>
+    <title>Document</title>
 
 </head>
 <body>

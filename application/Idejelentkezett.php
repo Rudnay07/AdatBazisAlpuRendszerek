@@ -1,3 +1,4 @@
+Roland Rudnay
 <?php
 require_once("connection.php");
 include_once("Lecek/fej.php");
@@ -72,7 +73,7 @@ oci_close($conn);
                 echo "<td >". $valtozo2['ORABER']."</td>";
                 echo "<td >". $valtozo2['SZUKSEGESNYELVTUDAS']."</td>";
                 $id=$valtozo['JELENTKEZETTID'];
-              
+                echo $id;
                 echo "<td> <a href='munkaroltorles.php?jelentkezettid'" .$valtozo['JELENTKEZETTID']."'>&#9747</a></td>";
             }
             oci_free_statement($stid2);
@@ -87,3 +88,4 @@ oci_close($conn);
         </tbody>
     </table>
 </body>
+</html>

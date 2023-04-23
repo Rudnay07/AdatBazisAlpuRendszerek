@@ -1,6 +1,6 @@
 <?php
 session_start();
-unset($_SESSION['email']);
+unset($_SESSION);
 session_destroy();
 echo "<script>;
         alert('Logout was successful!')

@@ -3,22 +3,44 @@
 require_once("connection.php");
 include_once ("Lecek/fej.php");
 
-
 $conn = csatlakozas();
-$email = $_SESSION['loguser'];
+$name = "";
+if(isset($_SESSION['loguser'])){
+    $email = $_SESSION['loguser'];
 
-$sql = "SELECT * FROM KERESO WHERE email=:email";
-$stid = oci_parse($conn, $sql);
+    $sql = "SELECT * FROM KERESO WHERE email=:email";
+    $stid = oci_parse($conn, $sql);
 
-oci_bind_by_name($stid, ':email', $email);
+    oci_bind_by_name($stid, ':email', $email);
 
-if (oci_execute($stid)) {
-    $res = oci_fetch_array($stid, OCI_ASSOC);
-    if ($res) {
-        $name = $res['NEV'];
-    }}
-oci_free_statement($stid);
-oci_close($conn);
+    if (oci_execute($stid)) {
+        $res = oci_fetch_array($stid, OCI_ASSOC);
+        if ($res) {
+            $name = $res['NEV'];
+        }}
+    oci_free_statement($stid);
+    oci_close($conn);
+
+}
+if(isset($_SESSION['loghirdeto'])){
+    $email = $_SESSION['loghirdeto'];
+
+    $sql = "SELECT * FROM Hirdeto WHERE email=:email";
+    $stid = oci_parse($conn, $sql);
+
+    oci_bind_by_name($stid, ':email', $email);
+
+    if (oci_execute($stid)) {
+        $res = oci_fetch_array($stid, OCI_ASSOC);
+        if ($res) {
+            $name = $res['NEV'];
+        }}
+    oci_free_statement($stid);
+    oci_close($conn);
+
+}
+
+
 
 ?>
 

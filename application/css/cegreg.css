@@ -1,0 +1,87 @@
+/*.main-div{
+    position: relative;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 15%;
+    border: 5px solid #FF4B2B;
+    border-radius: 0.5rem;
+    background-color: #FFFFFF;
+}*/
+.ceg-register{
+    position: absolute;
+    height: 70%;
+    width: 35%;
+    margin-top: 10%;
+    margin-left: 32%;
+    border: 3px solid #FF4B2B;
+    border-radius: 0.5rem;
+}
+.ceg-register h1 {
+    font-weight: bold;
+    margin: 0 0 15px 0;
+}
+button {
+    border-radius: 20px;
+    border: 1px solid #FF4B2B;
+    background-color: #FF4B2B;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    margin-top: 20px;
+    cursor: pointer;
+}
+button:active {
+    transform: scale(0.95);
+}
+button:hover {
+    background-color: red;
+}
+
+button:focus {
+    outline: none;
+}
+
+button.ghost {
+    background-color: transparent;
+    border-color: #FFFFFF;
+}
+form {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    height: 100%;
+    text-align: center;
+}
+
+input {
+    background-color: #ccc;
+    border: none;
+    padding: 12px 15px;
+    margin: 12px 0;
+    width: 100%;
+}
+select {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+a {
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 5px 0;
+}
+a:hover {
+    color: #ccc;
+}

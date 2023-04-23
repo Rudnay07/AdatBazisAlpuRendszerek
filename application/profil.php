@@ -5,28 +5,66 @@ include_once("Lecek/fej.php");
 
 
 $conn = csatlakozas();
-$email = $_SESSION['loguser'];
+if(isset($_SESSION['loguser'])){
+    $email = $_SESSION['loguser'];
 
-$sql = "SELECT * FROM KERESO WHERE email=:email";
-$stid = oci_parse($conn, $sql);
+    $sql = "SELECT * FROM KERESO WHERE email=:email";
+    $stid = oci_parse($conn, $sql);
 
-oci_bind_by_name($stid, ':email', $email);
+    oci_bind_by_name($stid, ':email', $email);
 
-if (oci_execute($stid)) {
-    $res = oci_fetch_array($stid, OCI_ASSOC);
-    if ($res) {
-        $name = $res['NEV'];
-        $email = $res['EMAIL'];
-        $nyelv = $res['NYELVTUDAS'];
-        $szuliido = $res['SZULETESIIDO'];
-        $veg = $res['VEGZETTSEG'];
-        $id=$res['FELHASZNALOID'];
+    if (oci_execute($stid)) {
+        $res = oci_fetch_array($stid, OCI_ASSOC);
+        if ($res) {
+            $name = $res['NEV'];
+            $email = $res['EMAIL'];
+            $nyelv = $res['NYELVTUDAS'];
+            $szuliido = $res['SZULETESIIDO'];
+            $veg = $res['VEGZETTSEG'];
+            $id=$res['FELHASZNALOID'];
 
+        }
     }
+
+    oci_free_statement($stid);
+    oci_close($conn);
+}
+if(isset($_SESSION['loghirdeto'])){
+    $email = $_SESSION['loghirdeto'];
+
+    $sql = "SELECT HIRDETOID, NEV, EMAIL, CEGID FROM Hirdeto WHERE email=:email";
+    $stid = oci_parse($conn, $sql);
+
+    oci_bind_by_name($stid, ':email', $email);
+
+    if (oci_execute($stid)) {
+        $res = oci_fetch_array($stid, OCI_ASSOC);
+        if ($res) {
+            $id=$res['HIRDETOID'];
+            $name = $res['NEV'];
+            $email = $res['EMAIL'];
+            $cegid= null;
+            if(isset($res['CEGID'])){
+                $cegid = $res['CEGID'];
+            }
+            if($cegid === null){
+                $ceg = "Nem tartozol egy céghez sem.";
+            } else{
+                $ceg = "";
+                $sql = "SELECT cegnev FROM CEG WHERE cegid=:cegid";
+                $stid = oci_parse($conn, $sql);
+                oci_bind_by_name($stid, ':cegid', $cegid);
+                oci_execute($stid);
+                $res = oci_fetch_array($stid, OCI_ASSOC);
+                $ceg = $res['CEGNEV'];
+            }
+        }
+    }
+
+    oci_free_statement($stid);
+    oci_close($conn);
 }
 
-oci_free_statement($stid);
-oci_close($conn);
 
 ?>
 
@@ -47,25 +85,54 @@ oci_close($conn);
 <table></table>
 <div class="body-text2">
     <td><img src="kepek/users.png" width="50%"></td>
+    <?php
+        if(isset($_SESSION['loguser'])){
+            echo '<h2>';
+            echo '<td>Neve: ' .$name. '</td>';
+            echo '</h2>';
+            echo '<h2>';
+            echo '<td>Email címe: ' .$email. '</td>';
+            echo '</h2>';
+            echo '<h2>';
+            echo '<td>Nyelvtudas: ' .$nyelv. '</td>';
+            echo '</h2>';
+            echo '<h2>';
+            echo '<td>Születési idő: ' .$szuliido. '</td>';
+            echo '</h2>';
+            echo '<h2>------------------------------------------------------</h2>';
+            echo '<h2>';
+            echo '<td>Itt tudod megtekinteni, </td>';
+            echo '<h2>hogy eddig milyen munkákra <a href="hirdetesek.php">jelentkeztél</a></h2>';
+            echo '</h2>';
+        }
+        if(isset($_SESSION['loghirdeto'])){
+            echo '<h2>';
+            echo '<td>Neve: ' .$name. '</td>';
+            echo '</h2>';
+            echo '<h2>';
+            echo '<td>Email címe: ' .$email. '</td>';
+            echo '</h2>';
+            echo '<h2>';
+            echo '<td>Cég neve: ' .$ceg. '</td>';
+            echo '</h2>';
+            echo '<h2>';
+            echo '<h2>------------------------------------------------------</h2>';
 
-    <h2>
-        <td>Neve: <?php if (!empty($name)) {echo $name;} ?></td>
-    </h2>
-    <h2>
-        <td>Email címe: <?php if (!empty($email)) {echo $email;} ?></td>
-    </h2>
-    <h2>
-        <td>Nyelvtudas: <?php if (!empty($nyelv)) {echo $nyelv;} ?></td>
-    </h2>
-    <h2>
-        <td>Születési idő: <?php if (!empty($szuliido)) {echo $szuliido;} ?></td>
-    </h2>
-    <h2>------------------------------------------------------</h2>
-    <h2>
-        <td>Itt tudod megtekinteni, </td>
-        <h2>hogy eddig milyen munkákra <a href="Idejelentkezett.php">jelentkeztél</a></h2>
+            if($cegid !== null){
+                echo '<h2>';
+                echo '<td>Itt tudod megtekinteni, </td>';
+                echo '<h2>hogy milyen munkákat <a href="Idejelentkezett.php">hirdettél</a>!</h2>';
+                echo '</h2>';
+            } else{
+                echo '<h2>';
+                echo '<td>Mivel még nem adta meg mely céghez tartozol, </td>';
+                echo '<h2>itt felregisztrálhatod a <a href="cegRegister.php?hirdeto_id='. $id .'">céged</a>!</h2>';
+                echo '</h2>';
+            }
 
-    </h2>
+        }
+    ?>
+
 </div>
 </table>
 

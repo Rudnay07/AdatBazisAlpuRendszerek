@@ -1,0 +1,23 @@
+.feladas {
+    margin-top: 50px;
+}
+
+.feladas a {
+    font-size: 27px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: inset 0 0 0 0 #aaa;
+    color: #FF4B2B;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    border-radius: .3rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.feladas a:hover {
+    color: black;
+    box-shadow: inset 400px 0 0 0 #aaa;
+    border-radius: .3rem;
+}
+.cim {
+    margin-bottom: 60px;
+}
