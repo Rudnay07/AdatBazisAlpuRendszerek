@@ -2,7 +2,7 @@
 require_once("connection.php");
 include_once("Lecek/fej.php");
 $conn = csatlakozas();
-$email = $_SESSION['loghirdeto'];
+/*$email = $_SESSION['loghirdeto'];
 
 $sql = "SELECT * FROM HIRDETO WHERE email=:email";
 $stid = oci_parse($conn, $sql);
@@ -18,7 +18,7 @@ if (oci_execute($stid)) {
     }
 }
 
-oci_free_statement($stid);
+oci_free_statement($stid);*/
 ?>
 <!doctype html>
 <html lang="en">
@@ -42,35 +42,32 @@ oci_free_statement($stid);
     <table class="styled-table">
         <thead>
         <tr>
-            <th>Munka megnevezése</th>
-            <th>Munka kategóriája</th>
-            <th>Órabér</th>
-            <th>Szükséges Nyelvtudás</th>
-            <th>Hirdetés módosítása</th>
-            <th>Hirdetés törlése</th>
+            <th>Jelentkező Neve</th>
+            <th>Jelentkező E-mail címe</th>
+            <th>Jelentkező Nyelvtudása</th>
+            <th>Jelentkező CV-je</th>
+            <th>Jelentkezés dátuma</th>
+            <th>Jelentkezés törlése</th>
         </tr>
         </thead>
         <tbody>
         <?php
-        $query = "SELECT * FROM MUNKA WHERE hirdetoid=:id";
+        $id = $_GET['munka_id'];
+        $query = "SELECT * FROM JELENTKEZETT LEFT JOIN KERESO ON KERESO.FELHASZNALOID=JELENTKEZETT.FELHASZNALOID WHERE JELENTKEZETT.MUNKAID=:id";
         $stid = oci_parse($conn, $query);
         oci_bind_by_name($stid, ':id', $id);
-        $sql = "SELECT MEGNEVEZES FROM KATEGORIA WHERE KATEGORIAID=:id";
-        $stmt = oci_parse($conn, $sql);
+
 
         oci_execute($stid);
 
         while (($valtozo = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) != false) {
-            oci_bind_by_name($stmt, ':id', $valtozo['KATEGORIAID']);
-            oci_execute($stmt);
-            $kategoria = oci_fetch_array($stmt, OCI_ASSOC + OCI_RETURN_NULLS);
             echo '<tr>';
-            echo '<td><a href="kikJelentkeztek.php?munka_id='.$valtozo['MUNKAID'].'">'. $valtozo['MEGNEVEZES'] .'</a></td>';
-            echo '<td>'. $kategoria['MEGNEVEZES'] .'</td>';
-            echo '<td>'. $valtozo['ORABER'] .'</td>';
-            echo '<td>'. $valtozo['SZUKSEGESNYELVTUDAS'] .'</td>';
-            echo '<td><a href="hirdetesModositasa.php?munka_id='.$valtozo['MUNKAID'].'">Módosít</a></td>';
-            echo '<td><a href="hirdetesTorlese.php?munka_id='.$valtozo['MUNKAID'].'">X</a></td>';
+            echo '<td>'. $valtozo['NEV'] .'</td>';
+            echo '<td>'. $valtozo['EMAIL'] .'</td>';
+            echo '<td>'. $valtozo['NYELVTUDAS'] .'</td>';
+            echo '<td><button>Hello</button></td>';
+            echo '<td>'. date('Y.m.d', strtotime($valtozo['DATUM'])).'</td>';
+            echo '<td><a href="jelentkezoTorlese.php?jelentkezoid='.$valtozo['JELENTKEZETTID'].'">X</a></td>';
             echo '</tr>';
         }
         oci_free_statement($stid);

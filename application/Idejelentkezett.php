@@ -1,4 +1,3 @@
-Roland Rudnay
 <?php
 require_once("connection.php");
 include_once("Lecek/fej.php");
@@ -52,32 +51,36 @@ oci_close($conn);
         </thead>
         <tbody>
         <?php
-        $query = "SELECT * FROM JELENTKEZETT WHERE FELHASZNALOID='$id'";
+        $query = "SELECT * FROM JELENTKEZETT WHERE FELHASZNALOID=:id";
         $stid = oci_parse($conn, $query);
+        oci_bind_by_name($stid, "id", $id);
         oci_execute($stid);
+
         $valtozo=oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
         $ertek=$valtozo['MUNKAID'];
         $ido=$valtozo['DATUM'];
         while (($valtozo = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) != false ) {
-            echo "<tr>";
+
 
             $ertek = $valtozo['MUNKAID'];
 
-            $query = "SELECT * FROM MUNKA WHERE MUNKAID='$ertek'";
+            $query = "SELECT * FROM MUNKA WHERE MUNKAID=:munkaid";
             $stid2 = oci_parse($conn, $query);
+            oci_bind_by_name($stid2, "munkaid", $ertek);
             oci_execute($stid2);
 
             while (($valtozo2 = oci_fetch_array($stid2, OCI_ASSOC+OCI_RETURN_NULLS)) != false ) {
-                echo "<td >". $valtozo2['MEGNEVEZES']."</td>";
-                echo "<td >". date('Y.m.d', strtotime($ido)) ."</td>";
-                echo "<td >". $valtozo2['ORABER']."</td>";
-                echo "<td >". $valtozo2['SZUKSEGESNYELVTUDAS']."</td>";
+                echo "<tr>";
+                echo "<td>". $valtozo2['MEGNEVEZES']."</td>";
+                echo "<td>". date('Y.m.d', strtotime($ido)) ."</td>";
+                echo "<td>". $valtozo2['ORABER']."</td>";
+                echo "<td>". $valtozo2['SZUKSEGESNYELVTUDAS']."</td>";
                 $id=$valtozo['JELENTKEZETTID'];
-                echo $id;
-                echo "<td> <a href='munkaroltorles.php?jelentkezettid'" .$valtozo['JELENTKEZETTID']."'>&#9747</a></td>";
+                echo '<td> <a href="munkaroltorles.php?jelentkezettid=' .$valtozo['JELENTKEZETTID'].'">&#9747</a></td>';
+                echo "</tr>";
             }
             oci_free_statement($stid2);
-            echo "</tr>";
+
         }
 
 

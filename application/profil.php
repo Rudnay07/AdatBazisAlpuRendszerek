@@ -102,7 +102,7 @@ if(isset($_SESSION['loghirdeto'])){
             echo '<h2>------------------------------------------------------</h2>';
             echo '<h2>';
             echo '<td>Itt tudod megtekinteni, </td>';
-            echo '<h2>hogy eddig milyen munkákra <a href="hirdetesek.php">jelentkeztél</a></h2>';
+            echo '<h2>hogy eddig milyen munkákra <a href="Idejelentkezett.php">jelentkeztél</a></h2>';
             echo '</h2>';
         }
         if(isset($_SESSION['loghirdeto'])){
@@ -121,7 +121,7 @@ if(isset($_SESSION['loghirdeto'])){
             if($cegid !== null){
                 echo '<h2>';
                 echo '<td>Itt tudod megtekinteni, </td>';
-                echo '<h2>hogy milyen munkákat <a href="Idejelentkezett.php">hirdettél</a>!</h2>';
+                echo '<h2>hogy milyen munkákat <a href="hirdetesek.php">hirdettél</a>!</h2>';
                 echo '</h2>';
             } else{
                 echo '<h2>';
