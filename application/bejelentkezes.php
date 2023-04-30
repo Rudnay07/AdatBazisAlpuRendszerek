@@ -54,7 +54,7 @@ if (isset($_POST['register'])) {
 // Lekérdezés futtatása
     if (oci_execute($stmt)) {
 // Sikeres regisztráció, továbbítás a bejelentkező oldalra
-        header("Location:Adatbazisalpu/Main.php");
+        header("Location: Main.php");
     } else {
         $message = "Valami hiba történt a regisztárció során";
     }

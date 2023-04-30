@@ -75,9 +75,6 @@ oci_free_statement($stid);*/
         ?>
         </tbody>
     </table>
-    <div class="feladas">
-        <a href="hirdetesFeladasa.php?hirdeto_id=<?php echo $id;?>">Hirdetés Feladása</a>
-    </div>
 
 
 </body>

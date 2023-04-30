@@ -52,21 +52,15 @@ oci_free_statement($stid);
         </thead>
         <tbody>
         <?php
-        $query = "SELECT * FROM MUNKA WHERE hirdetoid=:id";
+        $query = "SELECT MUNKA.MUNKAID, MUNKA.MEGNEVEZES AS MUNKA, MUNKA.ORABER, MUNKA.SZUKSEGESNYELVTUDAS, KATEGORIA.MEGNEVEZES AS KATEGORIA FROM MUNKA LEFT JOIN KATEGORIA ON KATEGORIA.KATEGORIAID=MUNKA.KATEGORIAID WHERE hirdetoid=:id";
         $stid = oci_parse($conn, $query);
-        oci_bind_by_name($stid, ':id', $id);
-        $sql = "SELECT MEGNEVEZES FROM KATEGORIA WHERE KATEGORIAID=:id";
-        $stmt = oci_parse($conn, $sql);
-
+        oci_bind_by_name($stid, "id", $id);
         oci_execute($stid);
 
         while (($valtozo = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) != false) {
-            oci_bind_by_name($stmt, ':id', $valtozo['KATEGORIAID']);
-            oci_execute($stmt);
-            $kategoria = oci_fetch_array($stmt, OCI_ASSOC + OCI_RETURN_NULLS);
             echo '<tr>';
-            echo '<td><a href="kikJelentkeztek.php?munka_id='.$valtozo['MUNKAID'].'">'. $valtozo['MEGNEVEZES'] .'</a></td>';
-            echo '<td>'. $kategoria['MEGNEVEZES'] .'</td>';
+            echo '<td><a href="kikJelentkeztek.php?munka_id='.$valtozo['MUNKAID'].'">'. $valtozo['MUNKA'] .'</a></td>';
+            echo '<td>'. $valtozo['KATEGORIA'] .'</td>';
             echo '<td>'. $valtozo['ORABER'] .'</td>';
             echo '<td>'. $valtozo['SZUKSEGESNYELVTUDAS'] .'</td>';
             echo '<td><a href="hirdetesModositasa.php?munka_id='.$valtozo['MUNKAID'].'">Módosít</a></td>';

@@ -32,7 +32,7 @@ if(isset($_SESSION['loguser'])){
 if(isset($_SESSION['loghirdeto'])){
     $email = $_SESSION['loghirdeto'];
 
-    $sql = "SELECT HIRDETOID, NEV, EMAIL, CEGID FROM Hirdeto WHERE email=:email";
+    $sql = "SELECT Hirdeto.HIRDETOID, Hirdeto.NEV, Hirdeto.EMAIL, Hirdeto.CEGID, CEG.CEGNEV FROM Hirdeto LEFT JOIN CEG ON CEG.CEGID=Hirdeto.CEGID WHERE email=:email";
     $stid = oci_parse($conn, $sql);
 
     oci_bind_by_name($stid, ':email', $email);
@@ -50,13 +50,7 @@ if(isset($_SESSION['loghirdeto'])){
             if($cegid === null){
                 $ceg = "Nem tartozol egy céghez sem.";
             } else{
-                $ceg = "";
-                $sql = "SELECT cegnev FROM CEG WHERE cegid=:cegid";
-                $stid = oci_parse($conn, $sql);
-                oci_bind_by_name($stid, ':cegid', $cegid);
-                oci_execute($stid);
-                $res = oci_fetch_array($stid, OCI_ASSOC);
-                $ceg = $res['CEGNEV'];
+                $ceg=$res['CEGNEV'];
             }
         }
     }

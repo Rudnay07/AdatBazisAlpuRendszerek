@@ -51,35 +51,21 @@ oci_close($conn);
         </thead>
         <tbody>
         <?php
-        $query = "SELECT * FROM JELENTKEZETT WHERE FELHASZNALOID=:id";
+        $query = "SELECT JELENTKEZETT.JELENTKEZETTID, JELENTKEZETT.MUNKAID, JELENTKEZETT.DATUM, MUNKA.MUNKAID, MUNKA.MEGNEVEZES, MUNKA.ORABER, MUNKA.SZUKSEGESNYELVTUDAS FROM JELENTKEZETT LEFT JOIN MUNKA ON JELENTKEZETT.MUNKAID=MUNKA.MUNKAID WHERE JELENTKEZETT.FELHASZNALOID=:id ORDER BY MUNKA.MEGNEVEZES";
         $stid = oci_parse($conn, $query);
         oci_bind_by_name($stid, "id", $id);
         oci_execute($stid);
 
         $valtozo=oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
-        $ertek=$valtozo['MUNKAID'];
-        $ido=$valtozo['DATUM'];
         while (($valtozo = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) != false ) {
-
-
-            $ertek = $valtozo['MUNKAID'];
-
-            $query = "SELECT * FROM MUNKA WHERE MUNKAID=:munkaid";
-            $stid2 = oci_parse($conn, $query);
-            oci_bind_by_name($stid2, "munkaid", $ertek);
-            oci_execute($stid2);
-
-            while (($valtozo2 = oci_fetch_array($stid2, OCI_ASSOC+OCI_RETURN_NULLS)) != false ) {
                 echo "<tr>";
-                echo "<td>". $valtozo2['MEGNEVEZES']."</td>";
-                echo "<td>". date('Y.m.d', strtotime($ido)) ."</td>";
-                echo "<td>". $valtozo2['ORABER']."</td>";
-                echo "<td>". $valtozo2['SZUKSEGESNYELVTUDAS']."</td>";
+                echo "<td>". $valtozo['MEGNEVEZES']."</td>";
+                echo "<td>". date('Y.m.d', strtotime($valtozo['DATUM'])) ."</td>";
+                echo "<td>". $valtozo['ORABER']."</td>";
+                echo "<td>". $valtozo['SZUKSEGESNYELVTUDAS']."</td>";
                 $id=$valtozo['JELENTKEZETTID'];
                 echo '<td> <a href="munkaroltorles.php?jelentkezettid=' .$valtozo['JELENTKEZETTID'].'">&#9747</a></td>';
                 echo "</tr>";
-            }
-            oci_free_statement($stid2);
 
         }
 

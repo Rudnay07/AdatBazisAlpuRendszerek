@@ -70,7 +70,6 @@ if(isset($_SESSION['loghirdeto'])){
                 echo '<li><a href="kategoriak.php">Kategóriák</a></li>';
                 echo '</ul>';
                 echo '<ul class="menu-links">';
-                echo '<li><a href="cegek.php">Cégek</a></li>';
                 echo '</ul>';
             }
             if(isset($_SESSION['loghirdeto'])){

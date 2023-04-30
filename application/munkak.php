@@ -39,20 +39,32 @@ include_once ("Lecek/fej.php");
 
 
     $query = "SELECT * FROM MUNKA WHERE kategoriaid='$kategoria_id '";
+    $sql = "SELECT CEG.CegNev FROM MUNKA 
+        JOIN HIRDETO ON MUNKA.HirdetoID = HIRDETO.FelhasznaloID 
+        JOIN CEG ON HIRDETO.CegID = CEG.CegID 
+        WHERE MUNKA.MUNKAID=:id";
 
-    //// -- lekerdezzuk a tabla tartalmat
+    // Prepare the statements
     $stid = oci_parse($con, $query);
+    $stmt = oci_parse($con, $sql);
 
-
+    // Execute the first statement
     oci_execute($stid);
+
     echo '<div class="cards">';
-    //// -- ujra vegrehajtom a lekerdezest, es kiiratom a sorokat
-    while ( ($valtozo = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) !=false) {
+
+    // Fetch the results and define columns to fetch for the second statement
+    while (($valtozo = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) !=false) {
+        oci_bind_by_name($stmt, "id", $valtozo["MUNKAID"]);
+        oci_execute($stmt);
+        $ceg = oci_fetch_array($stmt, OCI_ASSOC+OCI_RETURN_NULLS);
+
         echo '<div class="card">';
         echo '<div class="card-content">';
         echo '<h2>'. $valtozo["MEGNEVEZES"] .'</h2>';
         echo '<p>Szükséges nyelvtudás: '. $valtozo["SZUKSEGESNYELVTUDAS"] .'</p>';
         echo '<p>Órabér: '. $valtozo["ORABER"] .'Ft</p>';
+        echo '<p>Hirdető cég neve: '. $ceg["CEGNEV"] .'</p>';
         echo '</div>';
         $munka_id=$valtozo['MUNKAID'];
         echo '<div class="card-a"><a class="card__link" href="jelentkezzet.php?munka_id=' .  $munka_id. '"> Jelentkezek</a></div>';
@@ -60,7 +72,8 @@ include_once ("Lecek/fej.php");
     }
     echo '</div>';
 
-
+    oci_free_statement($stmt);
+    oci_free_statement($stid);
     oci_close($con);
 
 
